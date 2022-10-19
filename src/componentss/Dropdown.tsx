@@ -1,7 +1,5 @@
 import { Menu, Transition } from '@headlessui/react';
-// import { ChevronDownIcon } from '@heroicons/react/solid';
 import { Fragment, ReactNode } from 'react';
-// dropdown react component for the application
 export type DropdownItem = {
   label: string,
 
@@ -18,7 +16,6 @@ export default function Dropdown({title, children}: DropdownProps) {
       <div>
         <Menu.Button className="flex flex-col justify-center border-[3px] border-[#3c83ec] text-[#3c83ec] hover:text-[#ecf3fd] hover:bg-[#3c83ec] w-full px-4 py-2 text-sm font-medium duration-500 rounded-md">
           {title}
-          {/* <ChevronDownIcon className="-mr-1 ml-2 h-6 w-6" aria-hidden="true" /> */}
         </Menu.Button>
       </div>
 

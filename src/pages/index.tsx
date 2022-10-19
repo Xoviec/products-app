@@ -1,10 +1,7 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import { useEffect, useState } from "react";
 import { AssetProductProps, AssetProduct } from "../componentss/AssetProduct";
-import axios from 'axios';
-import Dropdown from "../componentss/dropDown";
-import { Menu } from "@headlessui/react";
+
 import { AssetCategorySelect } from "../componentss/AssetCategorySelect";
 import { AssetBrandSelect } from "../componentss/AssetBrandSelect";
 
@@ -32,8 +29,6 @@ let typeSelect;
 brandSelect = products?.filter((products: any)=> products.brand.toUpperCase().includes(catBrand))
 typeSelect = brandSelect?.filter((products: any)=> products.category.toLowerCase().includes(catType))
 
-// console.log(listLength)
-// console.log(brandSelect)
 console.log(typeSelect)
 
 useEffect(() =>{
@@ -56,26 +51,16 @@ const handleLimiterChange = () =>{
   setLimiter(limiter+5)
   console.log(limiter)
 }
-// useEffect(() =>{
-//   axios.get(API_URL)
-//   .then(function (response) {
-//     // handle success
-//     setOutput(response);
-//   })
-// },[])
-            
-
-
 
   return (
     <>
       <div className="flex flex-col items-center sm:mx-auto">
         <div className="flex justify-around items-center m-3 bg-[#ecf3fd] w-[800px] h-44 rounded-md shadow-3xl lg:w-[600px] md:w-[400px] sm:scale-75">
           <div className="flex justify-center w-[50%]">
-            <AssetCategorySelect categories={categories} setCatType={setCatType} catType={catType}></AssetCategorySelect>
+            <AssetCategorySelect categories={categories} setCatType={setCatType} catType={catType} setLimiter={setLimiter}></AssetCategorySelect>
           </div>
           <div className="flex justify-center w-[50%]">
-            <AssetBrandSelect setCatBrand={setCatBrand} catBrand={catBrand} setCatBrand={setCatBrand}></AssetBrandSelect>
+            <AssetBrandSelect setCatBrand={setCatBrand} catBrand={catBrand} setCatBrand={setCatBrand} setLimiter={setLimiter}></AssetBrandSelect>
           </div>
         </div>
         <div>
@@ -109,11 +94,10 @@ const handleLimiterChange = () =>{
       </h1>
     </div>
           }
-                      
+          
         </div>
         <div>
           <button className={typeSelect?.length > limiter ? 'mb-10 w-[200px] bg-[#3c83ec] text-[#ecf3fd] rounded-md h-10 sm:mb-2' : 'hidden'} onClick={handleLimiterChange}>
-
             Load more
           </button>
         </div>
