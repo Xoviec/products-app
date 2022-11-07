@@ -1,5 +1,6 @@
 {
-  "name": "shoperquest",
+  "homepage": "https://xoviec.github.io/products-app",
+  "name": "productsapp",
   "version": "0.1.0",
   "private": true,
   "scripts": {
