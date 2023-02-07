@@ -1,7 +1,7 @@
 import { Menu } from "@headlessui/react"
 import Dropdown from "./Dropdown"
 
-export const AssetBrandSelect = ({catBrand, setCatBrand, setLimiter}) =>{
+export const AssetBrandSelect = ({catBrand, setCatBrand, setLimiter}:any) =>{
 
 
     const brands:Array<string> = ['Apple', 'Samsung','HP Pavilion','OPPO','Microsoft Surface','Infinix','Impression of Acqua Di Gio','Royal_Mirage','Fog Scent Xpressio','Golden','luxury palace','LED Lights','Flying Wooden','Boho Decor','Dry Rose','fauji','Baking Food Items','Bake Parlor Big','Saaf & Khaas','Fair & Clear','ROREC White Rice','Dermive','Hemani Tea',"L'Oreal Paris",'Lord - Al-Rehab','Al Munakh']

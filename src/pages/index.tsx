@@ -29,6 +29,7 @@ let typeSelect;
 brandSelect = products?.filter((products: any)=> products.brand.toUpperCase().includes(catBrand))
 typeSelect = brandSelect?.filter((products: any)=> products.category.toLowerCase().includes(catType))
 
+
 console.log(typeSelect)
 
 useEffect(() =>{

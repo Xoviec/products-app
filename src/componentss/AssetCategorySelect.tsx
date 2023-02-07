@@ -1,10 +1,10 @@
 import { Menu } from "@headlessui/react"
 import Dropdown from "./Dropdown"
 
-export const AssetCategorySelect = ({categories,catType, setCatType, setLimiter}) =>{
+export const AssetCategorySelect = ({categories,catType, setCatType, setLimiter}:any) =>{
 
 
-    const handleCategoryChange = (event) =>{
+    const handleCategoryChange = (event:any) =>{
             setLimiter(5)
             event.target.innerText == 'All' ? setCatType('') :
             setCatType(event.target.innerText)
