@@ -1,9 +1,10 @@
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import { AssetProductProps, AssetProduct } from "../componentss/AssetProduct";
-
 import { AssetCategorySelect } from "../componentss/AssetCategorySelect";
 import { AssetBrandSelect } from "../componentss/AssetBrandSelect";
+
+
 
 // import { json } from "stream/consumers";
 
@@ -62,6 +63,8 @@ const handleLimiterChange = () =>{
           </div>
           <div className="flex justify-center w-[50%]">
             <AssetBrandSelect setCatBrand={setCatBrand} catBrand={catBrand} setCatBrand={setCatBrand} setLimiter={setLimiter}></AssetBrandSelect>
+            {/* <Link key={'e'} to={`/Users/}`}>{user.name}</Link> */}
+
           </div>
         </div>
         <div>
@@ -72,6 +75,7 @@ const handleLimiterChange = () =>{
             (
               typeSelect.length !== 0 ?
               typeSelect.slice(0, limiter).map((products)=>
+
               <AssetProduct title={products.title} id={products.id} brand={products.brand} category={products.category} thumbnail={products.thumbnail} price={products.price} stock={products.stock} description={products.description}></AssetProduct>    
               ) :
               <div className="flex flex-col p-5 mt-10 items-center font-bol text-[#282828] text-[2rem] w-96 h-36 bg-[#ecf3fd] rounded-md shadow-3xl md:w-72 md:h-36">
@@ -88,7 +92,7 @@ const handleLimiterChange = () =>{
               </div>
             )
       : 
-
+      
       <div className="flex flex-col justify-center p-5 mt-10 items-center font-bol text-[#282828] text-[2rem] w-96 h-36 bg-[#ecf3fd] rounded-md shadow-3xl md:w-72 md:h-36">
       <h1 className="text-[#3c83ec]">
         Loading...
